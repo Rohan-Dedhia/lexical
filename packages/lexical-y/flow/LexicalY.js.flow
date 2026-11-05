@@ -117,6 +117,7 @@ export type YUnsupportedConfigData =
 export type YUnsupportedEditData =
   | {readonly reason: 'read-only'}
   | {readonly reason: 'refused-at-write', readonly record: 'layout' | 'schema'};
+  | {readonly reason: 'held-composition'};
 export type YSelfCheckData = {
   readonly reason: 'local' | 'remote',
   readonly problems: ReadonlyArray<string>,
